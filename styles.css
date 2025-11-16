@@ -39,14 +39,16 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-* {
-    max-width: 100%;
-}
-
 img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+section, .section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .container {
@@ -55,6 +57,7 @@ img {
     padding: 0 20px;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
 }
 
 /* Navigation */
@@ -153,6 +156,8 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
 }
 
 .hero-title {
@@ -313,6 +318,9 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-bottom: 4rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .feature-card {
@@ -354,6 +362,9 @@ img {
     background: var(--bg-light);
     padding: 3rem;
     border-radius: 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .sim-details-content h3 {
@@ -467,6 +478,8 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     margin-top: 3rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .contact-info {
@@ -597,6 +610,8 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-top: 3rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .disclaimer-box {
