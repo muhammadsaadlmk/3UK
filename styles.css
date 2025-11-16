@@ -19,17 +19,42 @@
     --gradient: linear-gradient(135deg, #FF6900 0%, #FF8C42 100%);
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+}
+
+* {
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Navigation */
@@ -39,8 +64,12 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
     z-index: 1000;
     transition: all 0.3s ease;
+    overflow-x: hidden;
 }
 
 .navbar .container {
@@ -114,6 +143,9 @@ body {
     min-height: 90vh;
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .hero-content {
@@ -256,6 +288,9 @@ body {
 .features {
     padding: 5rem 0;
     background: var(--bg-white);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .section-title {
@@ -344,14 +379,20 @@ body {
 
 .sim-details-image img {
     width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 15px;
     box-shadow: var(--shadow);
+    display: block;
 }
 
 /* Pricing Section */
 .pricing {
     padding: 5rem 0;
     background: var(--bg-light);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .pricing-card {
@@ -416,6 +457,9 @@ body {
 .contact {
     padding: 5rem 0;
     background: var(--bg-white);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .contact-grid {
@@ -543,6 +587,9 @@ body {
 .disclaimer {
     padding: 5rem 0;
     background: var(--bg-light);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .disclaimer-content {
@@ -595,6 +642,9 @@ body {
     background: var(--text-dark);
     color: white;
     padding: 3rem 0 1rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .footer-content {
@@ -660,18 +710,27 @@ body {
     }
 
     /* Navigation */
+    .navbar {
+        height: auto;
+    }
+
+    .navbar .container {
+        padding: 8px 15px;
+        min-height: 50px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 50px;
         flex-direction: column;
         background: var(--bg-white);
         width: 100%;
         text-align: center;
         transition: 0.3s;
         box-shadow: var(--shadow);
-        padding: 2rem 0;
-        gap: 1rem;
+        padding: 20px 0;
+        gap: 8px;
     }
 
     .nav-menu.active {
@@ -679,27 +738,42 @@ body {
     }
 
     .nav-menu li {
-        padding: 0.5rem 0;
+        padding: 5px 0;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
     }
 
     .hamburger {
         display: flex;
     }
 
+    .hamburger span {
+        width: 22px;
+        height: 2.5px;
+    }
+
     .nav-brand {
-        font-size: 1.2rem;
+        font-size: 14px;
+        gap: 6px;
     }
 
     .logo {
-        width: 35px;
-        height: 35px;
-        font-size: 1.2rem;
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    .brand-text {
+        font-size: 14px;
     }
 
     /* Hero Section */
     .hero {
-        margin-top: 70px;
-        padding: 2rem 0;
+        margin-top: 50px;
+        padding: 24px 0;
         min-height: auto;
     }
 
@@ -875,22 +949,44 @@ body {
 
     /* Navigation */
     .navbar .container {
-        padding: 0.8rem 12px;
+        padding: 6px 12px;
+        min-height: 45px;
     }
 
     .nav-brand {
-        font-size: 1rem;
+        font-size: 13px;
+        gap: 5px;
     }
 
     .logo {
-        width: 30px;
-        height: 30px;
-        font-size: 1rem;
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+
+    .brand-text {
+        font-size: 13px;
+    }
+
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+    }
+
+    .nav-menu {
+        top: 45px;
+        padding: 16px 0;
+    }
+
+    .nav-menu a {
+        font-size: 13px;
     }
 
     /* Hero Section */
     .hero {
-        padding: 1.5rem 0;
+        margin-top: 45px;
+        padding: 20px 0;
     }
 
     .hero-title {
@@ -972,6 +1068,40 @@ body {
 }
 
 @media (max-width: 360px) {
+    /* Navigation */
+    .navbar .container {
+        padding: 5px 10px;
+        min-height: 42px;
+    }
+
+    .nav-brand {
+        font-size: 12px;
+        gap: 4px;
+    }
+
+    .logo {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .brand-text {
+        font-size: 12px;
+    }
+
+    .nav-menu {
+        top: 42px;
+        padding: 14px 0;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .hero {
+        margin-top: 42px;
+    }
+
     .hero-title {
         font-size: 1.5rem;
     }
